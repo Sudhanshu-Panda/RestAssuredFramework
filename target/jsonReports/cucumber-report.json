@@ -1,0 +1,114 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-06-18T18:35:53.156Z",
+        "before": [
+          {
+            "result": {
+              "duration": 12242406800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefs.Hooks.getPlaceID()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Verify if delete place API is working",
+        "description": "",
+        "id": "validating-place-apis;verify-if-delete-place-api-is-working",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2999900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Delete place pay load",
+            "match": {
+              "location": "stepdefs.StepDefinations.delete_place_pay_load()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4253448100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user calls \"DeletePlaceAPI\" with \"Post\" https request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DeletePlaceAPI",
+                  "offset": 12
+                },
+                {
+                  "val": "Post",
+                  "offset": 34
+                }
+              ],
+              "location": "stepdefs.StepDefinations.user_calls_something_with_something_https_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 997000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepdefs.StepDefinations.the_api_call_got_success_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17010600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepdefs.StepDefinations.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@deltePlace"
+          }
+        ]
+      }
+    ],
+    "name": "Validating PLace APIs",
+    "description": "",
+    "id": "validating-place-apis",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/addplace.feature",
+    "tags": []
+  }
+]
